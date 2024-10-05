@@ -118,12 +118,19 @@ Item {
     property int mileage_fake: 31582
     x: 0
     y: 0
+
+    function padStart(str, targetLength, padString) {
+        while (str.length < targetLength) {
+            str = padString + str;
+        }
+        return str;
+    }
     function odoString(){
         if(root.speedunits === 0){
-                return (root.odometer/.62).toFixed(0).toString().padStart(6,"0")
+                return padStart((root.odometer/.62).toFixed(0).toString(), 6, "0")
             }
         else{
-            return root.odometer.toFixed(0).toString().padStart(6,"0")
+            return padStart(root.odometer.toFixed(0).toString(), 6, "0")
         }
 
     }
