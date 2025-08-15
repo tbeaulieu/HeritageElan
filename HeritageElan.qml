@@ -136,7 +136,7 @@ Item {
         height: 480
         z: 0
         Image{
-            source: if(root.sidelight) "./heritage/dark_wood_bkg"; else "./heritage/wood_bkg.png"
+            source: if(root.sidelight) "./heritage/dark_wood_bkg.png"; else "./heritage/wood_bkg.png"
             x:0;y:0
         }
     }
